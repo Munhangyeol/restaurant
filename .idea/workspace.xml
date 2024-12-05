@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997f8fa4-05ed-42e5-a6a5-0956c2432477" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/v1.restaurant.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/Pasta/CreamPastaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/Pasta/CreamPastaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/Pasta/OilPastaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/Pasta/OilPastaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/Pasta/TomatoPastaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/Pasta/TomatoPastaPart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +80,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="restaurant.restaurant.domain.Pasta" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.RestaurantApplication">
     <configuration name="RestaurantApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="restaurant.restaurant.RestaurantApplication" />
@@ -153,7 +157,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733376940459</updated>
-      <workItem from="1733376943340" duration="1255000" />
+      <workItem from="1733376943340" duration="2126000" />
     </task>
     <servers />
   </component>

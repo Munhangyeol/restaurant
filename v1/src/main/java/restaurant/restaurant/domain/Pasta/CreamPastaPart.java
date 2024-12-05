@@ -3,10 +3,11 @@ package restaurant.restaurant.domain.Pasta;
 import java.util.Arrays;
 
 public class CreamPastaPart extends PastaPart{
-    String []ingredients;
-    String type;
-    public CreamPastaPart(String type){
+    private String []ingredients;
+    private String type;
+    public CreamPastaPart(String type,String[] ingredients){
         this.type=type;
+        this.ingredients=ingredients;
     }
 
     public void preCook(){
