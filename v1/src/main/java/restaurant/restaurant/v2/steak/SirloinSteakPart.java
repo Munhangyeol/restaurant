@@ -7,5 +7,4 @@ public class SirloinSteakPart extends SteakPart {
         this.type=type;
         this.ingredients=ingredients;
     }
-
 }

@@ -7,5 +7,4 @@ public class CreamPastaPart extends PastaPart {
         this.type = type;
         this.ingredients = ingredients;
     }
-
 }

@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997f8fa4-05ed-42e5-a6a5-0956c2432477" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/FoodPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/RestaurantApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/RestaurantApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/pasta/CreamPastaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/pasta/CreamPastaPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/pasta/OilPastaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/pasta/OilPastaPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/pasta/PastaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/pasta/PastaPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/pasta/TomatoPastaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/pasta/TomatoPastaPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/pizza/CheezePizzaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/pizza/CheezePizzaPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/pizza/GorgonzolaPizzaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/pizza/GorgonzolaPizzaPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/pizza/PeperoniPizzaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/pizza/PeperoniPizzaPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/pizza/PizzaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/pizza/PizzaPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/steak/RibeyeSteak.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/steak/RibeyeSteak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/steak/SirloinSteakPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/steak/SirloinSteakPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/steak/SteakPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/steak/SteakPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/steak/TBornSteakPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/steak/TBornSteakPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/domain/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v1/domain/ui/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pasta/CreamPastaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pasta/CreamPastaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pasta/PastaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pasta/PastaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pizza/CheezePizzaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pizza/CheezePizzaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pizza/PeperoniPizzaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pizza/PeperoniPizzaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pizza/PizzaPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/pizza/PizzaPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/steak/SirloinSteakPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/steak/SirloinSteakPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/steak/SteakPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/steak/SteakPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/ui/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/v2/ui/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +51,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -181,7 +178,7 @@
       <workItem from="1733389163890" duration="10669000" />
       <workItem from="1733455670816" duration="1438000" />
       <workItem from="1733457251686" duration="121000" />
-      <workItem from="1733481912766" duration="4640000" />
+      <workItem from="1733481912766" duration="11602000" />
     </task>
     <servers />
   </component>

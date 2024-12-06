@@ -1,5 +1,6 @@
 package restaurant.restaurant.v2.ui;
 
+import restaurant.restaurant.v2.FoodPart;
 import restaurant.restaurant.v2.pasta.CreamPastaPart;
 import restaurant.restaurant.v2.pasta.OilPastaPart;
 import restaurant.restaurant.v2.pasta.PastaPart;
@@ -79,9 +80,7 @@ public class UI {
                 steakPart = new RibeyeSteak("Rib-eye",new String[]{"Rib-eye meat","Butter"});
                 break;
         }
-        steakPart.preCook();
-        steakPart.cook();
-        steakPart.postCook();
+        cookEntire(steakPart);
     }
     private void takeCookingPastaStpes(int detailedMenu) {
         PastaPart pastaPart = null;
@@ -96,9 +95,7 @@ public class UI {
                 pastaPart = new OilPastaPart("Oil",new String[]{"Oil","Noodle"});
                 break;
         }
-        pastaPart.preCook();
-        pastaPart.cook();
-        pastaPart.postCook();
+        cookEntire(pastaPart);
     }
     private void takeCookingPizzaSteps(int detailedMenu) {
         PizzaPart pizzaPart = null;
@@ -112,8 +109,12 @@ public class UI {
             case 3:
                 pizzaPart = new GorgonzolaPizzaPart("Gorgonzola",new String[]{"Gorgonzola","Bread"});
         }
-        pizzaPart.preCook();
-        pizzaPart.cook();
-        pizzaPart.postCook();
+        assert pizzaPart != null;
+        cookEntire(pizzaPart);
+    }
+    private void cookEntire(FoodPart foodPart){
+        foodPart.preCook();
+        foodPart.cook();
+        foodPart.postCook();
     }
 }

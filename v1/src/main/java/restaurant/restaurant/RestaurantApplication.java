@@ -1,6 +1,6 @@
 package restaurant.restaurant;
 
-import restaurant.restaurant.v1.domain.ui.UI;
+import restaurant.restaurant.v2.ui.UI;
 
 import java.io.IOException;
 
