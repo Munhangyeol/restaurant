@@ -1,14 +1,15 @@
-package restaurant.restaurant.domain.steak;
+package restaurant.restaurant.v1.domain.pizza;
 
 import java.util.Arrays;
 
-public class RibeyeSteak extends SteakPart{
+public class CheezePizzaPart extends PizzaPart{
     private String type;
     private String [] ingredients;
-    public RibeyeSteak(String type,String []ingredients){
+    public CheezePizzaPart(String type,String []ingredients){
         this.type=type;
         this.ingredients=ingredients;
     }
+
     @Override
     public void preCook(){
         System.out.println("***** 요리 준비중 *****");

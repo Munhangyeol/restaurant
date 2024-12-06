@@ -1,4 +1,4 @@
-package restaurant.restaurant.domain.pizza;
+package restaurant.restaurant.v1.domain.pizza;
 
 public abstract class PizzaPart {
     protected String[] untensils =  {"Pot","Colander"};

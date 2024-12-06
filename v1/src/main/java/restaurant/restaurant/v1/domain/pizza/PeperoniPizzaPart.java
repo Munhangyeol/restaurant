@@ -1,11 +1,11 @@
-package restaurant.restaurant.domain.steak;
+package restaurant.restaurant.v1.domain.pizza;
 
 import java.util.Arrays;
 
-public class TBornSteakPart extends SteakPart{
+public class PeperoniPizzaPart extends PizzaPart{
     private String type;
     private String [] ingredients;
-    public TBornSteakPart(String type,String []ingredients){
+    public PeperoniPizzaPart(String type,String []ingredients){
         this.type=type;
         this.ingredients=ingredients;
     }

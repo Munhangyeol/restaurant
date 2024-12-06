@@ -1,13 +1,13 @@
-package restaurant.restaurant.domain.pasta;
+package restaurant.restaurant.v1.domain.steak;
 
 import java.util.Arrays;
 
-public class TomatoPastaPart extends PastaPart{
-    private String []ingredients;
+public class SirloinSteakPart extends SteakPart{
     private String type;
-    public TomatoPastaPart(String type,String[] ingredients){
-        this.ingredients=ingredients;
+    private String [] ingredients;
+    public SirloinSteakPart(String type,String []ingredients){
         this.type=type;
+        this.ingredients=ingredients;
     }
     @Override
     public void preCook(){
@@ -42,5 +42,4 @@ public class TomatoPastaPart extends PastaPart{
         System.out.println("***** 요리끝 *****");
         System.out.println(this.type+" 요리가 완료 되었습니다! 맛있게 드세요!");
     }
-
 }

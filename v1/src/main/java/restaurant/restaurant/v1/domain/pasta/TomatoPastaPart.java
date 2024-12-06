@@ -1,13 +1,13 @@
-package restaurant.restaurant.domain.pasta;
+package restaurant.restaurant.v1.domain.pasta;
 
 import java.util.Arrays;
 
-public class CreamPastaPart extends PastaPart{
+public class TomatoPastaPart extends PastaPart{
     private String []ingredients;
     private String type;
-    public CreamPastaPart(String type,String[] ingredients){
-        this.type=type;
+    public TomatoPastaPart(String type,String[] ingredients){
         this.ingredients=ingredients;
+        this.type=type;
     }
     @Override
     public void preCook(){
@@ -25,6 +25,7 @@ public class CreamPastaPart extends PastaPart{
     @Override
     public void cook(){
         System.out.println("***** 요리중 *****");
+
         Arrays.stream(ingredients).forEach(
                 ingredient -> System.out.print(ingredient + " ")
         );
@@ -41,4 +42,5 @@ public class CreamPastaPart extends PastaPart{
         System.out.println("***** 요리끝 *****");
         System.out.println(this.type+" 요리가 완료 되었습니다! 맛있게 드세요!");
     }
+
 }

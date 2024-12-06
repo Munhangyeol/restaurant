@@ -1,24 +1,24 @@
-package restaurant.restaurant.domain.ui;
+package restaurant.restaurant.v1.domain.ui;
 
-import restaurant.restaurant.domain.pasta.CreamPastaPart;
-import restaurant.restaurant.domain.pasta.OilPastaPart;
-import restaurant.restaurant.domain.pasta.PastaPart;
-import restaurant.restaurant.domain.pasta.TomatoPastaPart;
-import restaurant.restaurant.domain.pizza.CheezePizzaPart;
-import restaurant.restaurant.domain.pizza.GorgonzolaPizzaPart;
-import restaurant.restaurant.domain.pizza.PeperoniPizzaPart;
-import restaurant.restaurant.domain.pizza.PizzaPart;
-import restaurant.restaurant.domain.steak.RibeyeSteak;
-import restaurant.restaurant.domain.steak.SirloinSteakPart;
-import restaurant.restaurant.domain.steak.SteakPart;
-import restaurant.restaurant.domain.steak.TBornSteakPart;
+import restaurant.restaurant.v1.domain.pasta.CreamPastaPart;
+import restaurant.restaurant.v1.domain.pasta.OilPastaPart;
+import restaurant.restaurant.v1.domain.pasta.PastaPart;
+import restaurant.restaurant.v1.domain.pasta.TomatoPastaPart;
+import restaurant.restaurant.v1.domain.pizza.CheezePizzaPart;
+import restaurant.restaurant.v1.domain.pizza.GorgonzolaPizzaPart;
+import restaurant.restaurant.v1.domain.pizza.PeperoniPizzaPart;
+import restaurant.restaurant.v1.domain.pizza.PizzaPart;
+import restaurant.restaurant.v1.domain.steak.RibeyeSteak;
+import restaurant.restaurant.v1.domain.steak.SirloinSteakPart;
+import restaurant.restaurant.v1.domain.steak.SteakPart;
+import restaurant.restaurant.v1.domain.steak.TBornSteakPart;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class UI {
-    BufferedReader reader;
+ private final   BufferedReader reader;
     public UI(){
         reader = new BufferedReader(new InputStreamReader(System.in));
     }
@@ -38,11 +38,11 @@ public class UI {
                 break;
         }
     }
-    public int selectMenu() throws IOException {
+    private int selectMenu() throws IOException {
         printSelectMenu("안녕하세요! 어떤 파트의 음식을 드시고 싶으세요?", "1: Steak요리 || 2: Pasta요리 || 3: Pizza요리");
         return Integer.parseInt(reader.readLine());
     }
-    public int selectDetailMenu(int mainMenu) throws IOException {
+    private int selectDetailMenu(int mainMenu) throws IOException {
         int detailMenu = 0;
         switch (mainMenu){
             case 1:{
@@ -66,7 +66,7 @@ public class UI {
         System.out.println(notice);
         System.out.println(selectedMenu);
     }
-    private  void takeCookingSteakSteps(int detailedMenu) {
+    private void takeCookingSteakSteps(int detailedMenu) {
         SteakPart steakPart = null;
         switch (detailedMenu){
             case 1:
