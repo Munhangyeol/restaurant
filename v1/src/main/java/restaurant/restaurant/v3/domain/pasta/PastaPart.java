@@ -1,11 +1,11 @@
-package restaurant.restaurant.v2.pizza;
+package restaurant.restaurant.v3.domain.pasta;
 
-import restaurant.restaurant.v2.FoodPart;
+import restaurant.restaurant.v3.FoodPart;
 
 import java.util.Arrays;
 
-public abstract class PizzaPart implements FoodPart {
-    protected String[] untensils =  {"Pot","Colander"};
+public abstract class PastaPart implements FoodPart {
+    protected String[] untensils = {"Pan", "Grill", "Tongs"};
     protected String []ingredients;
     protected String type;
     public void preCook(){

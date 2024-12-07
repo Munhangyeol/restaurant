@@ -1,11 +1,11 @@
-package restaurant.restaurant.v2.steak;
+package restaurant.restaurant.v2.domain.pizza;
 
 import restaurant.restaurant.v2.FoodPart;
 
 import java.util.Arrays;
 
-public abstract class SteakPart implements FoodPart {
-    protected String[] untensils = {"Mixing", "Bowl", "Oven"};
+public abstract class PizzaPart implements FoodPart {
+    protected String[] untensils =  {"Pot","Colander"};
     protected String []ingredients;
     protected String type;
     public void preCook(){
@@ -36,4 +36,6 @@ public abstract class SteakPart implements FoodPart {
         System.out.println("***** 요리끝 *****");
         System.out.println(this.type+" 요리가 완료 되었습니다! 맛있게 드세요!");
     }
+
+
 }

@@ -1,6 +1,4 @@
-package restaurant.restaurant.v2.steak;
-
-import java.util.Arrays;
+package restaurant.restaurant.v3.domain.steak;
 
 public class TBornSteakPart extends SteakPart {
     public TBornSteakPart(String type,String []ingredients){

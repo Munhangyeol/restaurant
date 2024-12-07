@@ -1,18 +1,18 @@
 package restaurant.restaurant.v2.ui;
 
 import restaurant.restaurant.v2.FoodPart;
-import restaurant.restaurant.v2.pasta.CreamPastaPart;
-import restaurant.restaurant.v2.pasta.OilPastaPart;
-import restaurant.restaurant.v2.pasta.PastaPart;
-import restaurant.restaurant.v2.pasta.TomatoPastaPart;
-import restaurant.restaurant.v2.pizza.CheezePizzaPart;
-import restaurant.restaurant.v2.pizza.GorgonzolaPizzaPart;
-import restaurant.restaurant.v2.pizza.PeperoniPizzaPart;
-import restaurant.restaurant.v2.pizza.PizzaPart;
-import restaurant.restaurant.v2.steak.RibeyeSteak;
-import restaurant.restaurant.v2.steak.SirloinSteakPart;
-import restaurant.restaurant.v2.steak.SteakPart;
-import restaurant.restaurant.v2.steak.TBornSteakPart;
+import restaurant.restaurant.v2.domain.pasta.CreamPastaPart;
+import restaurant.restaurant.v2.domain.pasta.OilPastaPart;
+import restaurant.restaurant.v2.domain.pasta.PastaPart;
+import restaurant.restaurant.v2.domain.pasta.TomatoPastaPart;
+import restaurant.restaurant.v2.domain.pizza.CheezePizzaPart;
+import restaurant.restaurant.v2.domain.pizza.GorgonzolaPizzaPart;
+import restaurant.restaurant.v2.domain.pizza.PeperoniPizzaPart;
+import restaurant.restaurant.v2.domain.pizza.PizzaPart;
+import restaurant.restaurant.v2.domain.steak.RibeyeSteak;
+import restaurant.restaurant.v2.domain.steak.SirloinSteakPart;
+import restaurant.restaurant.v2.domain.steak.SteakPart;
+import restaurant.restaurant.v2.domain.steak.TBornSteakPart;
 
 import java.io.BufferedReader;
 import java.io.IOException;

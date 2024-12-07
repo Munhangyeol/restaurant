@@ -1,6 +1,4 @@
-package restaurant.restaurant.v2.pasta;
-
-import java.util.Arrays;
+package restaurant.restaurant.v2.domain.pasta;
 
 public class OilPastaPart extends PastaPart {
     public OilPastaPart(String type,String []ingredients){

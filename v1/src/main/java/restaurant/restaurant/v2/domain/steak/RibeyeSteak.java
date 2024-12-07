@@ -1,6 +1,4 @@
-package restaurant.restaurant.v2.steak;
-
-import java.util.Arrays;
+package restaurant.restaurant.v2.domain.steak;
 
 public class RibeyeSteak extends SteakPart {
     public RibeyeSteak(String type,String []ingredients){

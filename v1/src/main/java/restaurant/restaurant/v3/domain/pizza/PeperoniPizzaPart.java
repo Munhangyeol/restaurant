@@ -1,4 +1,4 @@
-package restaurant.restaurant.v2.pizza;
+package restaurant.restaurant.v3.domain.pizza;
 
 
 public class PeperoniPizzaPart extends PizzaPart {

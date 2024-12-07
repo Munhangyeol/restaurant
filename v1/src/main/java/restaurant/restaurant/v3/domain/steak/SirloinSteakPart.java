@@ -1,6 +1,4 @@
-package restaurant.restaurant.v2.steak;
-
-import java.util.Arrays;
+package restaurant.restaurant.v3.domain.steak;
 
 public class SirloinSteakPart extends SteakPart {
     public SirloinSteakPart(String type,String []ingredients){
