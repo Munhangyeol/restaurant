@@ -1,21 +1,19 @@
-package restaurant.restaurant.v4.service;
+package restaurant.restaurant.v4.service.DetailedMenuManager;
 
 import restaurant.restaurant.v4.FoodPart;
-import restaurant.restaurant.v4.domain.pasta.CreamPastaPart;
-import restaurant.restaurant.v4.domain.pasta.OilPastaPart;
-import restaurant.restaurant.v4.domain.pasta.TomatoPastaPart;
 import restaurant.restaurant.v4.domain.steak.RibeyeSteak;
 import restaurant.restaurant.v4.domain.steak.SirloinSteakPart;
 import restaurant.restaurant.v4.domain.steak.TBornSteakPart;
+import restaurant.restaurant.v4.service.DetailedMenuManager.DetailedMenuManager;
 
 import static restaurant.restaurant.v4.domain.menu.SteakMenuConsol.MENU_DETAIED_STEAK_NOTICE;
 import static restaurant.restaurant.v4.domain.menu.SteakMenuConsol.MENU_DETAIED_STEAK_SELECTED;
 
-public class SteakManager {
+public class SteakManager implements DetailedMenuManager {
     public SteakManager(){
 
     }
-    public FoodPart selectSteak(int detailedMenu){
+    public FoodPart selectDetailedMenu(int detailedMenu){
 
         return switch (detailedMenu) {
             case 1 -> new TBornSteakPart("T-Born", new String[]{"T-Born meat", "Butter"});

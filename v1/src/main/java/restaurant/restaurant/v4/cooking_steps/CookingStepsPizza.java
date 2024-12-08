@@ -1,23 +1,16 @@
 package restaurant.restaurant.v4.cooking_steps;
 
 import restaurant.restaurant.v4.FoodPart;
-import restaurant.restaurant.v4.domain.pizza.CheezePizzaPart;
-import restaurant.restaurant.v4.domain.pizza.GorgonzolaPizzaPart;
-import restaurant.restaurant.v4.domain.pizza.PeperoniPizzaPart;
-import restaurant.restaurant.v4.domain.pizza.PizzaPart;
-import restaurant.restaurant.v4.service.PizzaManager;
-
-import static restaurant.restaurant.v4.domain.menu.PizzaMenuConsol.MENU_DETAIED_PIZZA_NOTICE;
-import static restaurant.restaurant.v4.domain.menu.PizzaMenuConsol.MENU_DETAIED_PIZZA_SELECTED;
+import restaurant.restaurant.v4.service.DetailedMenuManager.DetailedMenuManager;
 
 public class CookingStepsPizza implements CookingSteps{
-    private final PizzaManager pizzaManager;
-    public CookingStepsPizza(PizzaManager pizzaManager) {
-        this.pizzaManager = pizzaManager;
+    private final DetailedMenuManager manager;
+    public CookingStepsPizza(DetailedMenuManager manager) {
+        this.manager = manager;
     }
     @Override
     public void takeCookingSteps(int detailedMenu) {
-        cookEntire(pizzaManager.selectPizza(detailedMenu));
+        cookEntire(manager.selectDetailedMenu(detailedMenu));
     }
 
     private void cookEntire(FoodPart foodPart){
@@ -26,7 +19,7 @@ public class CookingStepsPizza implements CookingSteps{
         foodPart.postCook();
     }
     public void printDetailedMenu(){
-        pizzaManager.printDetailedMenu();
+        manager.printDetailedMenu();
     }
 
 

@@ -1,18 +1,19 @@
-package restaurant.restaurant.v4.service;
+package restaurant.restaurant.v4.service.DetailedMenuManager;
 
 import restaurant.restaurant.v4.FoodPart;
 import restaurant.restaurant.v4.domain.pasta.CreamPastaPart;
 import restaurant.restaurant.v4.domain.pasta.OilPastaPart;
 import restaurant.restaurant.v4.domain.pasta.TomatoPastaPart;
+import restaurant.restaurant.v4.service.DetailedMenuManager.DetailedMenuManager;
 
 import static restaurant.restaurant.v4.domain.menu.PastaMenuConsol.MENU_DETAIED_PASTA_NOTICE;
 import static restaurant.restaurant.v4.domain.menu.PastaMenuConsol.MENU_DETAIED_PASTA_SELECTED;
 
-public class PastaManager {
+public class PastaManager implements DetailedMenuManager {
     public PastaManager(){
 
     }
-    public FoodPart selectPasta(int detailedMenu){
+    public FoodPart selectDetailedMenu(int detailedMenu){
         return switch (detailedMenu) {
             case 1 -> new TomatoPastaPart("Tomato", new String[]{"Tomato", "Noodle"});
             case 2 -> new CreamPastaPart("Cream", new String[]{"Cream", "Noodle"});

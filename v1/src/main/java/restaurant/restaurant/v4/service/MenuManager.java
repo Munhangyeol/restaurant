@@ -4,8 +4,9 @@ import restaurant.restaurant.v4.cooking_steps.CookingSteps;
 import restaurant.restaurant.v4.cooking_steps.CookingStepsPasta;
 import restaurant.restaurant.v4.cooking_steps.CookingStepsPizza;
 import restaurant.restaurant.v4.cooking_steps.CookingStepsSteak;
-
-
+import restaurant.restaurant.v4.service.DetailedMenuManager.PastaManager;
+import restaurant.restaurant.v4.service.DetailedMenuManager.PizzaManager;
+import restaurant.restaurant.v4.service.DetailedMenuManager.SteakManager;
 
 
 public class MenuManager {
