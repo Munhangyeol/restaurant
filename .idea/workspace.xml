@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="997f8fa4-05ed-42e5-a6a5-0956c2432477" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/PastaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/src/main/java/restaurant/restaurant/RestaurantApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/V1/src/main/java/restaurant/restaurant/v4/service/FoodSelectingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/V1/src/main/java/restaurant/restaurant/v4/service/FoodSelectingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V1/src/main/java/restaurant/restaurant/v4/service/SteakPartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/V1/src/main/java/restaurant/restaurant/v4/service/SteakPartService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +50,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -67,6 +70,9 @@
     "Application.RestaurantApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build v1.executor": "Run",
+    "Gradle.PastaTest.executor": "Run",
+    "Gradle.PizzaTest.executor": "Run",
+    "Gradle.RestaurantApplicationTests.executor": "Run",
     "Gradle.SteakTest.isSteakInRibEyeSteak.executor": "Run",
     "Gradle.UITest.isSteakInSirLoinSteak.executor": "Run",
     "Gradle.UITest.isSteakInTBornSteak.executor": "Run",
@@ -85,7 +91,7 @@
     "Spring Boot.RestaurantApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/SpringProject/restaurant",
+    "last_opened_file_path": "C:/SpringProject/restaurant/V1/src/main/java/restaurant/restaurant/v4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -96,6 +102,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\SpringProject\restaurant\V1\src\main\java\restaurant\restaurant\v4" />
       <recent name="C:\SpringProject\restaurant\V1\src\main\java\restaurant\restaurant\v3" />
       <recent name="C:\SpringProject\restaurant\V1\src\main\java\restaurant\restaurant" />
       <recent name="C:\SpringProject\restaurant\v1\src\main\java\restaurant\restaurant\v2" />
@@ -105,7 +112,7 @@
       <recent name="restaurant.restaurant.domain.Pasta" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RestaurantApplication">
+  <component name="RunManager" selected="Gradle.RestaurantApplicationTests">
     <configuration name="RestaurantApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="restaurant.restaurant.RestaurantApplication" />
       <module name="V1.restaurant.main" />
@@ -143,6 +150,54 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="PizzaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/v1" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;restaurant.restaurant.v2.PizzaTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RestaurantApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/v1" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;restaurant.restaurant.RestaurantApplicationTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="SteakTest.isSteakInRibEyeSteak" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -167,61 +222,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UITest.isSteakInSirLoinSteak" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/v1" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;restaurant.restaurant.UITest.isSteakInSirLoinSteak&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="UITest.isSteakInTBornSteak" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/v1" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;restaurant.restaurant.UITest.isSteakInTBornSteak&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RestaurantApplicationTests" />
+        <item itemvalue="Gradle.PizzaTest" />
         <item itemvalue="Gradle.PastaTest" />
         <item itemvalue="Application.RestaurantApplication" />
         <item itemvalue="Gradle.SteakTest.isSteakInRibEyeSteak" />
-        <item itemvalue="Gradle.UITest.isSteakInSirLoinSteak" />
-        <item itemvalue="Gradle.UITest.isSteakInTBornSteak" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +255,7 @@
       <workItem from="1733552741284" duration="6506000" />
       <workItem from="1733559463140" duration="98000" />
       <workItem from="1733567561271" duration="14000" />
-      <workItem from="1733634562890" duration="1883000" />
+      <workItem from="1733634562890" duration="4115000" />
     </task>
     <servers />
   </component>
