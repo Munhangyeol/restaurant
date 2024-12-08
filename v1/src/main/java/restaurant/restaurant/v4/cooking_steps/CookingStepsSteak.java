@@ -5,31 +5,30 @@ import restaurant.restaurant.v4.domain.steak.RibeyeSteak;
 import restaurant.restaurant.v4.domain.steak.SirloinSteakPart;
 import restaurant.restaurant.v4.domain.steak.SteakPart;
 import restaurant.restaurant.v4.domain.steak.TBornSteakPart;
+import restaurant.restaurant.v4.service.PizzaManager;
+import restaurant.restaurant.v4.service.SteakManager;
 
-public class CookingStepsSteak {
+import static restaurant.restaurant.v4.domain.menu.SteakMenuConsol.MENU_DETAIED_STEAK_NOTICE;
+import static restaurant.restaurant.v4.domain.menu.SteakMenuConsol.MENU_DETAIED_STEAK_SELECTED;
 
-    public CookingStepsSteak() {
+public class CookingStepsSteak implements CookingSteps{
+    private final SteakManager steakManager;
 
+    public CookingStepsSteak(SteakManager steakManager) {
+        this.steakManager = steakManager;
     }
 
-    public void takeCookingSteakSteps(int detailedMenu) {
-     SteakPart steakPart = null;
-        switch (detailedMenu){
-            case 1:
-                steakPart = new TBornSteakPart("T-Born",new String[]{"T-Born meat","Butter"});
-                break;
-            case 2:
-                steakPart = new SirloinSteakPart("Sir-loin", new String[]{"Sir-loin meat", "Butter"});
-                break;
-            case 3:
-                steakPart = new RibeyeSteak("Rib-eye",new String[]{"Rib-eye meat","Butter"});
-                break;
-        }
-        cookEntire(steakPart);
+    public void takeCookingSteps(int detailedMenu) {
+        cookEntire(steakManager.selectSteak(detailedMenu));
     }
     private void cookEntire(FoodPart foodPart){
         foodPart.preCook();
         foodPart.cook();
         foodPart.postCook();
     }
+    public void printDetailedMenu(){
+        steakManager.printDetailedMenu();
+    }
+
+
 }

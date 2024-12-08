@@ -5,5 +5,4 @@ public class RibeyeSteak extends SteakPart {
         this.type=type;
         this.ingredients=ingredients;
     }
-
 }
