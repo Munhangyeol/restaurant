@@ -38,7 +38,7 @@
 - 클린 코드에서 말하는 깨끗한 코드의 원칙을 따른다.
     - 코드에 대한 테스트 코드 역시 필수
 
-### Result
+### 결과 요약
 [V1-과정 Repository 링크](https://github.com/Munhangyeol/restaurant/blob/main/v1/readme.md)
 
 **Application 클래스**
@@ -235,7 +235,7 @@ public class CreamPastaPart extends PastaPart {
 ```
 
 - 이 클래스를 통해서 디테일한 메뉴에 대한 type,ingredients를 통해서 메뉴를 생성하는 책임을 가지고 있다.
-- 오버라이딩을 활용해서 기존의 코드 수정 없이 각 메뉴에 대한 구현이 가능하다.→  OCP
+- 오버라이딩을 활용해서 기존의 코드 수정 없이 각 메뉴에 대한 구현이 가능하다.→  `OCP`
 
 **Menu 패키지**
 
@@ -246,9 +246,8 @@ public class CreamPastaPart extends PastaPart {
 
 위 클래스들은 각각의 메뉴들에 대해서 모두 구현되어 있음
 
-### **설계 특징**
-
+### **설계의 결과물**
 - OCP (Open-Closed Principle): 새로운 메뉴나 세부 메뉴를 추가할 때 기존 코드를 수정하지 않고 확장 가능
-- DIP (Dependency Inversion Principle): CookingSteps, DetailedMenuManager, FoodPart는 인터페이스를 통해 추상화되어 의존성을 줄임
-- 책임 분리: UI, 메뉴 관리, 요리 단계 등이 각각 별도의 클래스로 분리되어 유지보수가 용이
-- 재사용성: CookingSteps와 DetailedMenuManager는 다양한 요리에 대해 재사용 가능.
+- DIP (Dependency Inversion Principle): `CookingSteps`, `DetailedMenuManager`, `FoodPart는` 인터페이스를 통해 추상화되어 의존성을 줄임
+- 책임 분리: UI, 메뉴 관리,세부 메뉴관리,요리 단계, 메뉴판, 요리파트가 각각 별도의 클래스로 분리되어 유지보수가 용이
+- 재사용성: `CookingSteps`와 `DetailedMenuManager` 는 다양한 요리에 대해 재사용 가능.
