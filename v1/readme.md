@@ -925,3 +925,218 @@ public interface DetailedMenuManager {
 ![image](https://github.com/user-attachments/assets/29847f92-b810-4ddf-8a99-5419e2a18afe)
 
 - 위의 CookingSteps를 어떻게 하면 불변으로 변경할수있을까
+
+## v5
+
+### 1. `MenuManager`  클래스 내의 `CookingSteps`  를 final형으로 어떻게 선언할 수 있을까
+
+- `CookingSteps` 가 불변형이 아니면, 변경의 위험성이 있다.
+- 그러나 어떤 메뉴를 선택할지는 사용자의 선택에 따라서 바뀌므로, 이는 변경 가능성에 대해서 열어두는게 낫지 않을까
+- 일단은 final형이 아닌 그대로 선언함
+
+### 2. 전체 결과
+
+**Application 클래스**
+
+```java
+    public static void main(String[] args) throws IOException {
+        UI restaurant=new UI(new MenuManager());
+        restaurant.run();
+    }
+```
+
+- Application 클래스에서는 UI클래스를 정의하고 실행한다.
+
+**UI클래스** 
+
+```java
+public class UI {
+ private final BufferedReader reader;
+ private final MenuManager menuManager;
+    public UI(MenuManager mainMenuManager){
+        this.menuManager = mainMenuManager;
+        reader = new BufferedReader(new InputStreamReader(System.in));
+
+    }
+    public void run() throws IOException {
+        selectMainMenu();
+        menuManager.cookBySelectedMenu(selectDetailMenu());
+    }
+    private void selectMainMenu() throws IOException {
+        printSelectMenu(MENU_MAIN_NOTICE,MENU_MAIN_SELECTED);
+        menuManager.selectMainMenu(Integer.parseInt(reader.readLine()));
+    }
+    private int selectDetailMenu() throws IOException {
+        menuManager.printDetailedMenu();
+        return Integer.parseInt(reader.readLine());
+    }
+    private void printSelectMenu(String notice, String selectedMenu) {
+        System.out.println(notice);
+        System.out.println(selectedMenu);
+    }
+}
+```
+
+- 현재 UI클래스는 메뉴를 출력하고, 메뉴를 입력  받는 것에 책임이 집중 되어있다.
+- 여기서 메뉴의 내용물은 MenuConsol내의 static 상수들로 정의가 되어있어서, 해당 내용물에 대한 책임은 UI클래스에서 담당하지 않고, MenuConsol내의 상수들이 담당한다.
+
+**MenuManager 클래스**
+
+```java
+public class MenuManager {
+    private CookingSteps cookingSteps;
+
+    public MenuManager(){
+
+    }
+    // showDetailedMenu이면 UI에 있어야 하는거 아닌가 라고 반문할 수 있지만
+    // 새로운 음식이 추가 되었을 때 변화를 생각하면 이 파트를 다른 클래스로 빼는게 매우 당연함
+    // 따라서 UI클래스 내에서의 selectDetailMenu메서드에서 분기의 책임을 여리고 위임할 수 있음
+    public void selectMainMenu(int mainMenu){
+        switch (mainMenu){
+            case 1:
+                cookingSteps=new CookingStepsSteak(new SteakManager());
+                break;
+            case 2:
+                cookingSteps=new CookingStepsPasta(new PastaManager());
+                break;
+            case 3:
+                cookingSteps = new CookingStepsPizza(new PizzaManager());
+                break;
+        }
+    }
+    public void printDetailedMenu(){
+        cookingSteps.printDetailedMenu();
+    }
+    public void cookBySelectedMenu(int detailedMenu){
+        cookingSteps.takeCookingSteps(detailedMenu);
+    }
+}
+
+```
+
+- MenuManager 클래스에서는 사용자가 고른 숫자에 대해서 메뉴의 Steps를 정해주는 책임을 가지고 있음
+- cookingSteps에게 상세메뉴보여주기, 요리과정 수행의 책임을 위임함
+
+**CookingSteps클래스**
+
+```java
+public class CookingStepsPasta implements CookingSteps{
+    private final DetailedMenuManager manager;
+    public CookingStepsPasta( DetailedMenuManager manager) {
+        this.manager=manager;
+
+    }
+    public void takeCookingSteps(int detailedMenu) {
+        cookEntire(manager.selectDetailedMenu(detailedMenu));
+    }
+    private void cookEntire(FoodPart foodPart){
+        foodPart.preCook();
+        foodPart.cook();
+        foodPart.postCook();
+    }
+    public void printDetailedMenu(){
+        manager.printDetailedMenu();
+    }
+
+}
+```
+
+- CookingStepsPasta는 CookingSteps를 상속받아서 구현됨
+- 요리의 단계를 정하는 책임을 가지고 있으며, 정한 요리를 통해서 요리를 수행한다.
+- 디테일한 Menu를 관리해주는 DetailedMenuManager로 selectDetailedMenu의 책임과 printDetailedMenu의 책임을 위임함
+- FoodPart는 각 요리에 대한 추상화를 통해서 인터페이스화→ OCP원칙, DIP원칙을 지킴
+- 또한 DetailedMenuManager도 `PastaManager`, `PizzaManager`, `SteakManager`  를 추상화하여 인터페이스화하였음→ OCP원칙, DIP원칙을 지킴
+
+**PastaManager클래스**
+
+```java
+public class PastaManager implements DetailedMenuManager {
+    public PastaManager(){
+
+    }
+    public FoodPart selectDetailedMenu(int detailedMenu){
+        return switch (detailedMenu) {
+            case 1 -> new TomatoPastaPart("Tomato", new String[]{"Tomato", "Noodle"});
+            case 2 -> new CreamPastaPart("Cream", new String[]{"Cream", "Noodle"});
+            case 3 -> new OilPastaPart("Oil", new String[]{"Oil", "Noodle"});
+            default -> throw new RuntimeException("This Menu was not in my Restaurant");
+        };
+    }
+    public void printDetailedMenu(){
+        printSelectMenu(MENU_DETAIED_PASTA_NOTICE, MENU_DETAIED_PASTA_SELECTED);
+
+    }
+    private void printSelectMenu(String notice, String selectedMenu) {
+        System.out.println(notice);
+        System.out.println(selectedMenu);
+    }
+}
+```
+
+- 이 클래스 내에서 디테일 한 메뉴 즉, 파스타 메뉴 내에서의 메뉴를 정해주고, 출력하는 책임을 가지고 있다.
+- `DetailedMenuManager`를 상속받아서 구현된 것임
+
+**PastaPart 추상 클래스**
+
+```java
+public abstract class PastaPart implements FoodPart {
+    protected String[] untensils = {"Pan", "Grill", "Tongs"};
+    protected String []ingredients;
+    protected String type;
+    public void preCook(){
+        System.out.println("***** 요리 준비중 *****");
+        Arrays.stream(ingredients).forEach(
+                ingredient -> System.out.print(ingredient + " ")
+        );
+        System.out.print("재료와 ");
+        Arrays.stream(untensils).forEach(
+                untensil -> System.out.print(untensil + " ")
+        );
+        System.out.println("요리기구를 준비중입니다.");
+    }
+
+    public void cook(){
+        System.out.println("***** 요리중 *****");
+        Arrays.stream(ingredients).forEach(
+                ingredient -> System.out.print(ingredient + " ")
+        );
+        System.out.print("재료와 ");
+        Arrays.stream(untensils).forEach(
+                untensil -> System.out.print(untensil + " ")
+        );
+        System.out.println("요리기구를 이용해서 ");
+        System.out.println(this.type+" 요리를 요리 중입니다.");
+    }
+    public void postCook(){
+        System.out.println("***** 요리끝 *****");
+        System.out.println(this.type+" 요리가 완료 되었습니다! 맛있게 드세요!");
+    }
+}
+```
+
+- 이 클래스는  `FoodPart` 인터페이스를 구현해서 만든 클래스 로써,파스타의 요리 전,요리 중, 요리 후 수행하는 즉 전체 요리 과정에서 수행하는 것들에 대한 책임이 있다.
+- 어떤 요리과정을 사용하는지는 `CookingSteps`에서 책임을 가지고 있다.
+
+**CreamPastaPart클래스** 
+
+```java
+public class CreamPastaPart extends PastaPart {
+    public CreamPastaPart(String type,String[] ingredients) {
+        this.type = type;
+        this.ingredients = ingredients;
+    }
+}
+```
+
+- 이 클래스를 통해서 디테일한 메뉴에 대한 type,ingredients를 통해서 메뉴를 생성하는 책임을 가지고 있다.
+- 오버라이딩을 활용해서 기존의 코드 수정 없이 각 메뉴에 대한 구현이 가능하다.→  OCP
+
+**Menu 패키지**
+
+![image](https://github.com/user-attachments/assets/f896dc55-5daf-4c6c-8f0a-a39a302b4b72)
+
+
+- 콘솔창에 나오는 UI의 컨텐츠는 여기서 각 책임별로 나누어서 관리함
+
+위 클래스들은 각각의 메뉴들에 대해서 모두 구현되어 있음
