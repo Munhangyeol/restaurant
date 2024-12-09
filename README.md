@@ -34,12 +34,12 @@
 
 ### 프로그래밍 요구사항
 
-- v1이므로 후에 어떤 설계가 올지 모른다. 따라서 solid원칙에 입각한 설계를 요구함
+- v1이므로 후에 어떤 설계가 올지 모른다. 따라서 **solid**원칙에 입각한 설계를 요구함
 - 클린 코드에서 말하는 깨끗한 코드의 원칙을 따른다.
     - 코드에 대한 테스트 코드 역시 필수
 
+
 ### 결과 요약
-[V1-과정 Repository 링크](https://github.com/Munhangyeol/restaurant/blob/main/v1/readme.md)
 
 **Application 클래스**
 
@@ -251,3 +251,6 @@ public class CreamPastaPart extends PastaPart {
 - DIP (Dependency Inversion Principle): `CookingSteps`, `DetailedMenuManager`, `FoodPart는` 인터페이스를 통해 추상화되어 의존성을 줄임
 - 책임 분리: UI, 메뉴 관리,세부 메뉴관리,요리 단계, 메뉴판, 요리파트가 각각 별도의 클래스로 분리되어 유지보수가 용이
 - 재사용성: `CookingSteps`와 `DetailedMenuManager` 는 다양한 요리에 대해 재사용 가능.
+
+### 과정
+[V1-과정 Repository 링크](https://github.com/Munhangyeol/restaurant/blob/main/v1/readme.md)
