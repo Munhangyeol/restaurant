@@ -251,6 +251,9 @@ public class CreamPastaPart extends PastaPart {
 - DIP (Dependency Inversion Principle): `CookingSteps`, `DetailedMenuManager`, `FoodPart는` 인터페이스를 통해 추상화되어 의존성을 줄임
 - 책임 분리: UI, 메뉴 관리,세부 메뉴관리,요리 단계, 메뉴판, 요리파트가 각각 별도의 클래스로 분리되어 유지보수가 용이
 - 재사용성: `CookingSteps`와 `DetailedMenuManager` 는 다양한 요리에 대해 재사용 가능.
+### 책임이란?
+
+>ex) 만약 Soup이란 메뉴를 추가한다면, run,selectMenu,selectDetailMenu의 3가지의 메서드들에서 분기를 하는 파트 즉 메뉴를 고르는 부분에서 수정이 필요하다. 그러나 Soup파트가 추가 되더라도, 변경되지 않는 부분(printSelectMenu과 run,selectMenu,selectDetailMenu에서 입력을 하는 부분과 메뉴를 보여줘야하는 부분등)이 존재한다. 그런데, 이렇게 기능이 추가,변경 시 클래스내에서 변경 해야 하는 메서드, 변경하지 않는 메서드가 공존한다면, 이는 결과적으로 기능을 추가 변경시에 실수를 유발할 수 있을 것이다.→ 이에 따라서 하나의 책임을 기능을 추가,변경 시에 변경되는 코드들로 정의하고, 이렇게 기능 추가,변경시 변경되는 코드들이 하나의 클래스에 있어야 한다는 것이 단일 책임 원칙임.
 
 ### 과정
 [V1-과정 Repository 링크](https://github.com/Munhangyeol/restaurant/blob/main/v1/readme.md)
