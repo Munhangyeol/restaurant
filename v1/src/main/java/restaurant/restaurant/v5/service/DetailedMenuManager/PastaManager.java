@@ -1,9 +1,9 @@
-package restaurant.restaurant.v4.service.DetailedMenuManager;
+package restaurant.restaurant.v5.service.DetailedMenuManager;
 
-import restaurant.restaurant.v4.FoodPart;
-import restaurant.restaurant.v4.domain.pasta.CreamPastaPart;
-import restaurant.restaurant.v4.domain.pasta.OilPastaPart;
-import restaurant.restaurant.v4.domain.pasta.TomatoPastaPart;
+import restaurant.restaurant.v5.FoodPart;
+import restaurant.restaurant.v5.domain.pasta.CreamPastaPart;
+import restaurant.restaurant.v5.domain.pasta.OilPastaPart;
+import restaurant.restaurant.v5.domain.pasta.TomatoPastaPart;
 
 import static restaurant.restaurant.v4.domain.menu.PastaMenuConsol.MENU_DETAIED_PASTA_NOTICE;
 import static restaurant.restaurant.v4.domain.menu.PastaMenuConsol.MENU_DETAIED_PASTA_SELECTED;
