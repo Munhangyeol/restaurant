@@ -239,7 +239,8 @@ public class CreamPastaPart extends PastaPart {
 
 **Menu 패키지**
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a2dae048-db02-4188-9d60-447f1709ad77/35cbba04-c303-4b8c-b9b3-c643b1968da0/image.png)
+![image](https://github.com/user-attachments/assets/b29c7086-5ad0-45f0-ad17-b263bff69d6e)
+
 
 - 콘솔창에 나오는 UI의 컨텐츠는 여기서 각 책임별로 나누어서 관리함
 
