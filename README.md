@@ -39,6 +39,25 @@
     - 코드에 대한 테스트 코드 역시 필수
 
 
+### 입출력 예시
+```
+어떤 음식을 먹고 싶으신가요?
+1. 스테이크
+2. 파스타
+3. 피자
+> 1
+
+어떤 스테이크를 드시겠습니까?
+1. T-Born Steak
+2. Sir-loin Steak
+3. Rib-eye Steak
+> 1
+
+T-Born Steak의 재료와 Pan, Grill, Tongs(집게)를 준비 중입니다.
+T-Born Steak의 재료와 Pan, Grill, Tongs(집게)를 이용해서 T-Born Steak를 요리 중입니다.
+T-Born Steak 요리가 완료되었습니다! 맛있게 드세요.
+```
+
 ### 결과 요약
 
 **Application 클래스**
